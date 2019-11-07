@@ -87,6 +87,7 @@ class CsdnCrawlerDownloaderMiddleware(object):
 
     def process_request(self, request, spider):
         # 指定谷歌浏览器路径
+        #self.driver = webdriver.Chrome(chrome_options=self.chrome_options,executable_path='/usr/bin/chromedriver')
         self.driver = webdriver.Chrome(chrome_options=self.chrome_options,executable_path='C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe')
         self.driver.get(request.url)
         time.sleep(2)

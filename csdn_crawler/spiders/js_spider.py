@@ -20,7 +20,7 @@ class JsSpiderSpider(scrapy.Spider):
 
     def get_articleHtml(self, response):
         article = Article()
-        article['Atype'] = 'js'
+        article['Atype'] = 'javascript'
         article['title'] = response.xpath('//*[@id="mainBox"]/main/div[1]/div[1]/div/div[1]/h1/text()').extract()
         article['content'] = response.xpath('//*[@id="mainBox"]/main/div[1]/article[@class="baidu_pl"]').extract()
         yield article

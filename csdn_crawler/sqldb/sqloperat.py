@@ -8,7 +8,7 @@ class SqlOperat:
 
 
     def __init__(self):
-        __url="mysql+pymysql://root:gaoliangyong@203.195.239.94:3306/graduationprojectdb?charset=utf8"
+        __url="mysql+pymysql://root:123456@118.25.186.77:3306/graduationprojectdb?charset=utf8"
         __engine=create_engine(__url,echo=False,encoding="utf-8")
         __SessionClass = scoped_session(sessionmaker(bind=__engine))
         self.__session_obj = __SessionClass()

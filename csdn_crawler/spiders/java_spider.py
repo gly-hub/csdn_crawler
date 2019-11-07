@@ -18,7 +18,7 @@ class JavaSpiderSpider(scrapy.Spider):
         for url in urls:
             if 'blog.csdn.net' in url and 'article' in url:
                 yield scrapy.Request(url = url, callback = self.get_articleHtml)
-        # url = 'https://blog.csdn.net/ytusdc/article/details/78878995'
+        # url = 'https://blog.csdn.net/u012206617/article/details/101679475'
         # yield scrapy.Request(url = url, callback = self.get_articleHtml)
 
     def get_articleHtml(self, response):

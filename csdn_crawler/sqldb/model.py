@@ -11,7 +11,6 @@ class ArticleContent(Base):
     Aid = Column(Integer, primary_key = True, autoincrement=True)
     Atitle = Column(String, nullable = False)
     Aabstract = Column(Text, nullable = True)
-    Acontent = Column(Text, nullable = False)
     Tid = Column(Integer)
 
 class ArticleType(Base):
@@ -27,3 +26,11 @@ class ArticleHtml(Base):
     Hid = Column(Integer, primary_key = True, autoincrement=True)
     Aid = Column(Integer)
     Ahtml = Column(Text, nullable = False)
+
+class ArticleWord(Base):
+    __tablename__ = "article_word"
+
+    Wid = Column(Integer, primary_key = True, autoincrement=True)
+    Aid = Column(Integer)
+    Wtype = Column(String, nullable = False)
+    Wword = Column(String, nullable = False)
