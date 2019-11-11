@@ -41,11 +41,6 @@ class WebCrawler(threading.Thread):
                 if _current_exec:
                     if _exec != "1":
                         file = datetime.datetime.now().strftime('%Y-%m-%d')
-                        import os
-                        if os.path.exists('doubt\\'+ file +'.txt'):
-                            os.remove('doubt\\'+ file +'.txt')
-                        if os.path.exists('D:\\import\\caizhengbu\\list.xlsx'):
-                            os.remove('D:\\import\\caizhengbu\\list.xlsx')
                         os.system('scrapy crawlall')
                         cfg.set('SITE','exec','1')
                         cfg.write(open(configFile,'w',encoding='utf-8'))
